@@ -1,0 +1,32 @@
+set $terminal kitty
+set $mod Mod4
+
+# is used in the bar {} block below.
+font pango:JetBrainsMono Nerd font 14
+
+# Autostart
+include "~/.config/i3/scripts/autostart.conf"
+
+# System key
+include "~/.config/i3/configs/system-keybind.conf"
+
+# Default binding
+include "~/.config/i3/configs/default-keybind.conf"
+
+#default_border pixel 4
+# Hide titlebar
+for_window [class=^.*] border pixel 0
+
+# Gaps
+gaps outer 40
+gaps bottom 5
+gaps horizontal 5
+gaps inner 10
+#gaps outer 5
+
+# Floating
+floating_minimum_size 1000 x 800
+floating_maximum_size 1200 x 800
+
+client.focused   #ffffff #ffffff #ffffff  
+
